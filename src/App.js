@@ -1,28 +1,19 @@
-import NavBar from "./components/NavBar";
+import cardData from "./cardData";
 import About from "./components/About";
 import Card from "./components/Card";
+import NavBar from "./components/NavBar";
 import "./styles/common.css";
-import Arr from "./cardData";
 
-function App() {
-  const cardArr = Arr.map((ind) => (
-    <Card
-      cardImg={ind.cardImg}
-      rating={ind.rating}
-      votes={ind.votes}
-      country={ind.country}
-      about={ind.about}
-      price={ind.price}
-    />
-  ));
+const App = () => {
+  const cards = cardData.map((card) => <Card key={card.id} {...card} />);
 
   return (
     <>
       <NavBar />
       <About />
-      <div className="all-cards">{cardArr}</div>
+      <div className="card-grid">{cards}</div>
     </>
   );
-}
+};
 
 export default App;

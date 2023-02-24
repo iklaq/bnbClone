@@ -3,7 +3,8 @@ import cardImg2 from "./assets/cardImg2.png";
 import cardImg3 from "./assets/cardImg3.png";
 
 export default [
-  {
+  { 
+    id: 1,
     cardImg: cardImg1,
     rating: 4.99,
     votes: 158,
@@ -12,6 +13,7 @@ export default [
     price: "1,575",
   },
   {
+    id: 2,
     cardImg: cardImg2,
     rating: 4.97,
     votes: 67,
@@ -20,6 +22,7 @@ export default [
     price: "3,678",
   },
   {
+    id: 3,
     cardImg: cardImg3,
     rating: 5.0,
     votes: 15,
